@@ -12,7 +12,7 @@ function NavList() {
         color='blue-gray'
         className='p-1 font-medium'>
         <a
-          href='#'
+          href='#about'
           className='flex items-center hover:text-blue-500 transition-colors'>
           About
         </a>
@@ -82,7 +82,6 @@ export function NavbarSimple() {
         </div>
         <div className='flex items-center gap-x-1'>
           <Button
-            variant='gradient'
             size='sm'
             className='hidden lg:inline-block'>
             <span>Resume</span>
@@ -111,7 +110,6 @@ export function NavbarSimple() {
         <div className='flex items-center gap-x-1'>
           <Button
             fullWidth
-            variant='gradient'
             size='sm'
             className=''>
             <span>Resume</span>

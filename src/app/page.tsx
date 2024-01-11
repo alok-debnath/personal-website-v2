@@ -1,6 +1,8 @@
 'use client';
 import { NavbarSimple } from '@/components/Navbar';
-import { ButtonDefault } from '@/components/Button'
+import { ButtonDefault } from '@/components/Button';
+import Footer from '@/components/Footer';
+import SocialIconsList from '@/components/SocialIconsList';
 // import styled from 'styled-components';
 
 // const P_green = styled.p`
@@ -17,38 +19,101 @@ import { ButtonDefault } from '@/components/Button'
 //   color: rgb(204, 214, 246);
 // `;
 const H1 =
-  'font-bold text-4xl md:text-5xl leading-normal lg:text-6xl xl:text-7xl 2xl:text-8xl transition-all duration-300 ease-in-out font-bold text-4xl md:text-5xl leading-normal lg:text-6xl xl:text-7xl 2xl:text-8xl transition-all duration-300 ease-in-out';
+  'font-bold text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl leading-normal transition-all duration-300 ease-in-out';
 
 const Home = () => {
   return (
     <>
-      <div className='mx-auto min-w-screen min-h-screen p-4'>
+      <div className='mx-auto min-w-screen min-h-screen p-4 text-slate bg-navy'>
         <div className='mx-auto max-w-screen-2xl'>
           <NavbarSimple />
-          <div className='mx-3 mt-6'>
-            <div className='grid grid-cols-12 gap-4'>
-              <div className='col-span-8'>
-                <p>Hi, my name is</p>
+          <div className='grid grid-cols-12'>
+            <div className='col-span-1 hidden lg:block'></div>
+            <div className='fixed top-0 left-0 h-screen items-center px-4 ms-3 hidden lg:flex'>
+              <SocialIconsList />
+            </div>
+            <div className='col-span-12 lg:col-span-10 mx-3 mt-10'>
+              <div className='grid grid-cols-12 gap-4'>
+                <div className='col-span-8'>
+                  <p className='text-emerald'>Hi, my name is</p>
+                </div>
+                <div className='col-span-12 md:col-span-9'>
+                  <h1 className={`${H1} text-bright-slate`}>Alok Debnath.</h1>
+                  <h1 className={`${H1}`}>Someone who's in love with the Web.</h1>
+                </div>
+                <div className='col-span-11 md:col-span-6'>
+                  <p>
+                    I'm a passionate web developer looking to gain practical experience in building
+                    exceptional digital experiences. I'm eager to learn and contribute to innovative
+                    projects in the field.
+                  </p>
+                </div>
+                <div className='col-span-8 my-10'>
+                  <ButtonDefault
+                    className=''
+                    buttonLabel='Check out my GitHub!'
+                  />
+                </div>
               </div>
-
-              <div className='col-span-12 md:col-span-9'>
-                <h1 className={`${H1}`}>Alok Debnath.</h1>
-                <h1 className={`${H1}`}>Someone who's in love with Web.</h1>
+              <div className='grid grid-cols-12 gap-y-8 md:gap-x-14 my-10 mx-5'>
+                <div className='col-span-12'>
+                  <h3 id='about'>
+                    <ol className='grid grid-cols-1 gap-4 list-decimal list-inside list-decimal-leading-zero'>
+                      <li className='text-xl font-semibold'>
+                        <span className='ms-2 text-3xl font-semibold'>About Me</span>
+                      </li>
+                    </ol>
+                  </h3>
+                </div>
+                <div className='col-span-12 md:col-span-7 space-y-4'>
+                  <p>
+                    Hi there! My name is Alok Debnath, someone who's passionate about web
+                    development. I started my journey in the world of coding when I pursued my
+                    Diploma in Computer Engineering. As a curious kid, I always enjoyed creating and
+                    breaking things to better understand how they work. This love of discovery
+                    eventually led me to web development.
+                  </p>
+                  <p>
+                    Recently, I completed an internship as a Full-Stack Web Developer at Synnefo
+                    Solution from December 2022 to March 2023, where I gained practical experience
+                    working on real-world projects. I enjoyed using and learning new technologies
+                    while combining my knowledge of various fields to build better solutions.
+                  </p>
+                  <p>I have expertise in several areas of web development, including:</p>
+                  <div className='grid grid-cols-12'>
+                    <div className='col-span-12 md:col-span-10 lg:col-span-8'>
+                      <ul className='grid grid-cols-2 gap-4 list-disc list-inside'>
+                        <li>React JS</li>
+                        <li>Python</li>
+                        <li>Laravel</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>HTML/CSS</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-span-12 md:col-span-5'>
+                  <p>
+                    I'm a passionate web developer looking to gain practical experience in building
+                    exceptional digital experiences. I'm eager to learn and contribute to innovative
+                    projects in the field.
+                  </p>
+                </div>
               </div>
-              <div className='col-span-11 md:col-span-6'>
-                <p>
-                  I'm a passionate web developer looking to gain practical experience in building
-                  exceptional digital experiences. I'm eager to learn and contribute to innovative
-                  projects in the field.
+            </div>
+            <div className='col-span-1 hidden lg:block'></div>
+            <div className='fixed top-0 max-w-fit right-0 h-screen items-center px-4 me-3 hidden lg:flex'>
+              <div className='group cursor-pointer p-3 text-center grid grid-cols-1 gap-y-6'>
+                <p
+                  style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
+                  className='group-hover:text-emerald group-hover:transform group-hover:translate-y-[-5px] transition-transform duration-300 ease-in-out'>
+                  alokdebnath.in@gmail.com
                 </p>
-              </div>
-              <div className='col-span-8'>
-                <ButtonDefault
-                  buttonLabel="Check out my GitHub!"
-                />
               </div>
             </div>
           </div>
+          <Footer />
         </div>
       </div>
     </>

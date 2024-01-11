@@ -1,5 +1,5 @@
 import { Button } from '@material-tailwind/react';
 
-export function ButtonDefault({ buttonLabel }) {
-  return <Button>{buttonLabel}</Button>;
+export function ButtonDefault({ buttonLabel, className }) {
+  return <Button className={`normal-case ${className}`}>{buttonLabel}</Button>;
 }
