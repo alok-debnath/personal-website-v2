@@ -39,7 +39,7 @@ const Home = () => {
             <div className='col-span-12 lg:col-span-10 mx-3 mt-10'>
               <div className='grid grid-cols-12 gap-2 md:gap-4'>
                 <div className='col-span-8'>
-                  <p className='text-emerald'>Hey there, I'm</p>
+                  <p className='text-emerald'>Hey there, I&apos;m</p>
                 </div>
 
                 <div className='col-span-12 md:col-span-9'>
@@ -49,7 +49,7 @@ const Home = () => {
 
                 <div className='col-span-11 md:col-span-6'>
                   <p>
-                    I'm an enthusiastic web developer eager to transform ideas into remarkable
+                    I&apos;m an enthusiastic web developer eager to transform ideas into remarkable
                     digital experiences. My passion lies in learning and contributing to
                     cutting-edge projects that push the boundaries of web development.
                   </p>
@@ -72,8 +72,8 @@ const Home = () => {
                 </div>
                 <div className='col-span-12 md:col-span-7 space-y-4'>
                   <p>
-                    Hi there! I'm Alok Debnath, a passionate web developer. My journey into coding
-                    began during my Computer Engineering. As a naturally curious individual, I've
+                    Hi there! I&apos;m Alok Debnath, a passionate web developer. My journey into coding
+                    began during my Computer Engineering. As a naturally curious individual, I&apos;ve
                     always been drawn to creating and breaking things to gain a deeper understanding
                     of their inner workings. This innate curiosity eventually paved the way for my
                     entry into the exciting world of web development.
@@ -108,8 +108,8 @@ const Home = () => {
                 </div>
                 <div className='col-span-12 md:col-span-5'>
                   <p>
-                    I'm a passionate web developer looking to gain practical experience in building
-                    exceptional digital experiences. I'm eager to learn and contribute to innovative
+                    I&apos;m a passionate web developer looking to gain practical experience in building
+                    exceptional digital experiences. I&apos;m eager to learn and contribute to innovative
                     projects in the field.
                   </p>
                 </div>
