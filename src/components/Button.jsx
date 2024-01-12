@@ -1,6 +1,6 @@
 import { Button } from '@material-tailwind/react';
 
-export function ButtonDefault({ buttonLabel, size = '', className = '', fullWidth = false }) {
+export function ButtonDefault({ buttonLabel, size = 'md', className = '', fullWidth = false }) {
   return (
     <Button
       fullWidth={fullWidth}
