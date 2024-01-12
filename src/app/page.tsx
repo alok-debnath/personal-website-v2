@@ -3,7 +3,8 @@ import { NavbarSimple } from '@/components/Navbar';
 import { ButtonDefault } from '@/components/Button';
 import Footer from '@/components/Footer';
 import SocialIconsList from '@/components/SocialIconsList';
-// import styled from 'styled-components';
+import MouseHalo from '@/components/MouseHalo';
+// import styled, { keyframes } from 'styled-components';
 
 // const P_green = styled.p`
 //   color: rgb(100, 255, 218);
@@ -18,34 +19,38 @@ import SocialIconsList from '@/components/SocialIconsList';
 // const H1_focused = styled.h1`
 //   color: rgb(204, 214, 246);
 // `;
+
 const H1 =
-  'font-bold text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl leading-normal transition-all duration-300 ease-in-out';
+  'font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl leading-snug transition-all duration-300 ease-in-out';
 
 const Home = () => {
   return (
     <>
+      <MouseHalo />
       <div className='mx-auto min-w-screen min-h-screen p-4 text-slate bg-navy'>
-        <div className='mx-auto max-w-screen-2xl'>
+        <div className='mx-auto max-w-screen-2xl content-section'>
           <NavbarSimple />
           <div className='grid grid-cols-12'>
             <div className='col-span-1 hidden lg:block'></div>
-            <div className='fixed top-0 left-0 h-screen items-center px-4 ms-3 hidden lg:flex'>
+            <div className='fixed top-0 left-0 h-screen items-center px-4 ms-2 hidden lg:flex'>
               <SocialIconsList />
             </div>
             <div className='col-span-12 lg:col-span-10 mx-3 mt-10'>
-              <div className='grid grid-cols-12 gap-4'>
+              <div className='grid grid-cols-12 gap-2 md:gap-4'>
                 <div className='col-span-8'>
-                  <p className='text-emerald'>Hi, my name is</p>
+                  <p className='text-emerald'>Hey there, I'm</p>
                 </div>
+
                 <div className='col-span-12 md:col-span-9'>
                   <h1 className={`${H1} text-bright-slate`}>Alok Debnath.</h1>
-                  <h1 className={`${H1}`}>Someone who's in love with the Web.</h1>
+                  <h1 className={`${H1}`}>A web enthusiast on a journey of innovation.</h1>
                 </div>
+
                 <div className='col-span-11 md:col-span-6'>
                   <p>
-                    I'm a passionate web developer looking to gain practical experience in building
-                    exceptional digital experiences. I'm eager to learn and contribute to innovative
-                    projects in the field.
+                    I'm an enthusiastic web developer eager to transform ideas into remarkable
+                    digital experiences. My passion lies in learning and contributing to
+                    cutting-edge projects that push the boundaries of web development.
                   </p>
                 </div>
                 <div className='col-span-8 my-10'>
@@ -67,27 +72,35 @@ const Home = () => {
                 </div>
                 <div className='col-span-12 md:col-span-7 space-y-4'>
                   <p>
-                    Hi there! My name is Alok Debnath, someone who's passionate about web
-                    development. I started my journey in the world of coding when I pursued my
-                    Diploma in Computer Engineering. As a curious kid, I always enjoyed creating and
-                    breaking things to better understand how they work. This love of discovery
-                    eventually led me to web development.
+                    Hi there! I'm Alok Debnath, a passionate web developer. My journey into coding
+                    began during my Computer Engineering. As a naturally curious individual, I've
+                    always been drawn to creating and breaking things to gain a deeper understanding
+                    of their inner workings. This innate curiosity eventually paved the way for my
+                    entry into the exciting world of web development.
                   </p>
                   <p>
-                    Recently, I completed an internship as a Full-Stack Web Developer at Synnefo
-                    Solution from December 2022 to March 2023, where I gained practical experience
-                    working on real-world projects. I enjoyed using and learning new technologies
-                    while combining my knowledge of various fields to build better solutions.
+                    I had the privilege of working at{' '}
+                    <a
+                      className='text-emerald'
+                      href=''>
+                      Vandalay Business Solutions
+                    </a>
+                    , an experience that not only honed my skills but also encouraged continuous
+                    learning amidst real-world projects. Exploring and embracing new technologies
+                    became an integral part of my daily routine. I relished the opportunity to
+                    integrate my knowledge across diverse domains to craft innovative solutions.
                   </p>
                   <p>I have expertise in several areas of web development, including:</p>
                   <div className='grid grid-cols-12'>
                     <div className='col-span-12 md:col-span-10 lg:col-span-8'>
                       <ul className='grid grid-cols-2 gap-4 list-disc list-inside'>
+                        <li>Next JS</li>
                         <li>React JS</li>
                         <li>Python</li>
                         <li>Laravel</li>
                         <li>JavaScript</li>
                         <li>SQL</li>
+                        <li>MongoDB</li>
                         <li>HTML/CSS</li>
                       </ul>
                     </div>

@@ -2,26 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.halo {
+  position: fixed;
+  z-index: 0;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(80, 158, 126, 0.137) 0%, rgba(0, 0, 0, 0) 60%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s, background 0.2s;
+}
+.content-section{
+  z-index: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.halo-button {
+  position: relative;
+  overflow: hidden;
+  z-index: inherit;
+}
+
+.btn-halo {
+  position: absolute;
+  content: '';
+  width: 20px; /* Adjust the size of the halo */
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 255, 42, 0.5); /* Adjust the color and transparency */
+  animation: haloAnimation 4s infinite linear; /* Adjust the animation duration */
+
+  @keyframes haloAnimation {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }

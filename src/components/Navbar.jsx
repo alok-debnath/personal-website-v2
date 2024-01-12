@@ -4,52 +4,29 @@ import { Navbar, Collapse, Typography, IconButton, Button } from '@material-tail
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 function NavList() {
+  const navItems = [
+    { text: 'About', href: '#about' },
+    { text: 'Experience', href: '#' },
+    { text: 'Work', href: '#' },
+    { text: 'Contact', href: '#' },
+  ];
+
   return (
     <ul className='my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6'>
-      <Typography
-        as='li'
-        variant='small'
-        color='blue-gray'
-        className='p-1 font-medium'>
-        <a
-          href='#about'
-          className='flex items-center hover:text-blue-500 transition-colors'>
-          About
-        </a>
-      </Typography>
-      <Typography
-        as='li'
-        variant='small'
-        color='blue-gray'
-        className='p-1 font-medium'>
-        <a
-          href='#'
-          className='flex items-center hover:text-blue-500 transition-colors'>
-          Experience
-        </a>
-      </Typography>
-      <Typography
-        as='li'
-        variant='small'
-        color='blue-gray'
-        className='p-1 font-medium'>
-        <a
-          href='#'
-          className='flex items-center hover:text-blue-500 transition-colors'>
-          Work
-        </a>
-      </Typography>
-      <Typography
-        as='li'
-        variant='small'
-        color='blue-gray'
-        className='p-1 font-medium'>
-        <a
-          href='#'
-          className='flex items-center hover:text-blue-500 transition-colors'>
-          Contact
-        </a>
-      </Typography>
+      {navItems.map((item, index) => (
+        <Typography
+          key={index}
+          as='li'
+          variant='small'
+          color='blue-gray'
+          className='p-1 font-medium'>
+          <a
+            href={item.href}
+            className='flex items-center hover:text-emerald text-bright-slate transition-colors'>
+            {item.text}
+          </a>
+        </Typography>
+      ))}
     </ul>
   );
 }
@@ -68,13 +45,13 @@ export function NavbarSimple() {
   }, []);
 
   return (
-    <Navbar className='sticky top-4 z-10 mx-auto max-w-screen-2xl px-6 py-3'>
+    <Navbar className='sticky top-4 z-10 mx-auto max-w-screen-2xl px-6 py-3 bg-navy border-navy backdrop-blur-md shadow-none'>
       <div className='flex items-center justify-between text-blue-gray-900'>
         <Typography
           as='a'
           href='#'
           variant='h6'
-          className='mr-4 cursor-pointer py-1.5'>
+          className='mr-4 cursor-pointer py-1.5 text-bright-slate'>
           Alok
         </Typography>
         <div className='mr-4 hidden lg:block'>

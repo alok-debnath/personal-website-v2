@@ -55,11 +55,11 @@ const socialIcons = [
 
 const SocialIconsList = () => {
   return (
-    <ul className='text-center grid grid-cols-1 gap-y-1'>
+    <ul className='text-center grid grid-cols-1 gap-y-0'>
       {socialIcons.map((social, index) => (
         <li
           key={index}
-          className='group cursor-pointer p-3'>
+          className='group cursor-pointer p-4'>
           <div className='group-hover:transform group-hover:translate-y-[-5px] transition-transform duration-300 ease-in-out'>
             {social.icon}
           </div>
