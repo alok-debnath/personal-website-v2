@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import { Navbar, Collapse, Typography, IconButton, Button } from '@material-tailwind/react';
+import { Navbar, Collapse, Typography, IconButton } from '@material-tailwind/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ButtonDefault } from './Button';
 
 function NavList() {
   const navItems = [
@@ -58,11 +59,11 @@ export function NavbarSimple() {
           <NavList />
         </div>
         <div className='flex items-center gap-x-1'>
-          <Button
+          <ButtonDefault
             size='sm'
-            className='hidden lg:inline-block'>
-            <span>Resume</span>
-          </Button>
+            className='hidden lg:inline-block'
+            buttonLabel='Resume'
+          />
         </div>
         <IconButton
           variant='text'
@@ -71,12 +72,12 @@ export function NavbarSimple() {
           onClick={() => setOpenNav(!openNav)}>
           {openNav ? (
             <XMarkIcon
-              className='h-6 w-6'
+              className='h-6 w-6 text-bright-slate'
               strokeWidth={2}
             />
           ) : (
             <Bars3Icon
-              className='h-6 w-6'
+              className='h-6 w-6 text-bright-slate'
               strokeWidth={2}
             />
           )}
@@ -85,12 +86,12 @@ export function NavbarSimple() {
       <Collapse open={openNav}>
         <NavList />
         <div className='flex items-center gap-x-1'>
-          <Button
+          <ButtonDefault
             fullWidth
             size='sm'
-            className=''>
-            <span>Resume</span>
-          </Button>
+            className=''
+            buttonLabel='Resume'
+          />
         </div>
       </Collapse>
     </Navbar>

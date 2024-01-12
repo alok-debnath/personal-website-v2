@@ -29,6 +29,7 @@ const Home = () => {
       <MouseHalo />
       <div className='mx-auto min-w-screen min-h-screen p-4 text-slate bg-navy'>
         <div className='mx-auto max-w-screen-2xl content-section'>
+          <div className="mobile-halo md:hidden w-max"></div>
           <NavbarSimple />
           <div className='grid grid-cols-12'>
             <div className='col-span-1 hidden lg:block'></div>
@@ -55,7 +56,6 @@ const Home = () => {
                 </div>
                 <div className='col-span-8 my-10'>
                   <ButtonDefault
-                    className=''
                     buttonLabel='Check out my GitHub!'
                   />
                 </div>
