@@ -5,8 +5,8 @@ export function ButtonDefault({ buttonLabel, size = 'md', className = '', fullWi
     <Button
       fullWidth={fullWidth}
       size={size}
-      className={`normal-case bg-transparent border border-emerald ${className}`}>
-      <span className='text-emerald'>{buttonLabel}</span>
+      className={`group normal-case bg-transparent border-emerald hover:bg-emerald border hover:border-slate duration-300 ease-in-out ${className}`}>
+      <span className='group-hover:text-black text-emerald duration-300 ease-in-out'>{buttonLabel}</span>
     </Button>
   );
 }

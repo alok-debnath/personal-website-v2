@@ -3,6 +3,27 @@ import React from 'react';
 import { Navbar, Collapse, Typography, IconButton } from '@material-tailwind/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ButtonDefault } from './Button';
+import { motion } from 'framer-motion';
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const items = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 function NavList() {
   const navItems = [
@@ -13,22 +34,27 @@ function NavList() {
   ];
 
   return (
-    <ul className='my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6'>
+    <motion.ul
+      className='container my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6'
+      variants={container}
+      initial='hidden'
+      animate='visible'>
       {navItems.map((item, index) => (
-        <Typography
+        <motion.Typography
           key={index}
           as='li'
           variant='small'
           color='blue-gray'
-          className='p-1 font-medium'>
+          className='item p-1 font-medium'
+          variants={items}>
           <a
             href={item.href}
             className='flex items-center hover:text-emerald text-bright-slate transition-colors'>
             {item.text}
           </a>
-        </Typography>
+        </motion.Typography>
       ))}
-    </ul>
+    </motion.ul>
   );
 }
 

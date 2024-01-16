@@ -1,3 +1,25 @@
+import { motion } from 'framer-motion';
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const socialIcons = [
   {
     icon: (
@@ -57,19 +79,26 @@ const socialIcons = [
 
 const SocialIconsList = () => {
   return (
-    <ul className='text-center grid grid-cols-1 gap-y-0'>
+    <motion.ul
+      className='container text-center grid grid-cols-1 gap-y-0'
+      variants={container}
+      initial='hidden'
+      animate='visible'>
       {socialIcons.map((social, index) => (
-        <li
+        <motion.li
           key={index}
-          className='group cursor-pointer'>
-          <a href={social.href} target="_blank">
+          className='item group cursor-pointer'
+          variants={item}>
+          <a
+            href={social.href}
+            target='_blank'>
             <div className='p-4 group-hover:transform group-hover:translate-y-[-5px] transition-transform duration-300 ease-in-out'>
               {social.icon}
             </div>
           </a>
-        </li>
+        </motion.li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 
