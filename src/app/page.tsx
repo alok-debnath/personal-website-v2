@@ -8,6 +8,7 @@ import MobileHalo from '@/components/MobileHalo';
 import PageLoader from '@/components/PageLoader';
 import { Reveal } from '@/components/utils/Reveal';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 // import styled, { keyframes } from 'styled-components';
 
@@ -33,17 +34,23 @@ const Home = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setPageJourney(1);
-    }, 2200);
+    }, 3000);
 
     return () => clearTimeout(timeoutId);
   }, []);
   return (
     <>
-      {pageJourney === 0 && <PageLoader />}
-      {pageJourney === 1 && (
-        <>
-          <MouseHalo />
-          <div className='mx-auto min-w-screen min-h-screen p-4 text-slate bg-navy'>
+      <div
+        className={`${
+          pageJourney !== 0 ? 'mx-auto min-w-screen min-h-screen p-4 text-slate' : ''
+        } bg-navy`}>
+        {pageJourney === 0 && <PageLoader />}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, ease: 'easeInOut', delay: 3 }}>
+          <div className={`${pageJourney === 1 ? '' : 'hidden'}`}>
+            <MouseHalo />
             <div className='mx-auto max-w-screen-2xl content-section'>
               <MobileHalo />
               <NavbarSimple />
@@ -95,9 +102,9 @@ const Home = () => {
                         </h3>
                       </Reveal>
                     </div>
-                    <div className='col-span-12 md:col-span-7 space-y-4'>
+                    <div className='col-span-12 md:col-span-7'>
                       <Reveal>
-                        <>
+                        <div className='space-y-4'>
                           <p>
                             Hi there! I&apos;m Alok Debnath, a passionate web developer. My journey
                             into coding began during my Computer Engineering. As a naturally curious
@@ -134,7 +141,7 @@ const Home = () => {
                               </ul>
                             </div>
                           </div>
-                        </>
+                        </div>
                       </Reveal>
                     </div>
                     <div className='col-span-12 md:col-span-5'>
@@ -162,8 +169,8 @@ const Home = () => {
               <Footer />
             </div>
           </div>
-        </>
-      )}
+        </motion.div>
+      </div>
     </>
   );
 };
