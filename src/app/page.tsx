@@ -12,9 +12,6 @@ import { motion } from 'framer-motion';
 
 // import styled, { keyframes } from 'styled-components';
 
-// const P_green = styled.p`
-//   color: rgb(100, 255, 218);
-// `;
 // const P_regular = styled.p`
 //   color: rgb(136, 146, 176);
 // `;
