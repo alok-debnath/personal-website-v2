@@ -25,6 +25,21 @@ const items = {
   },
 };
 
+const handleClick = (e) => {
+  e.preventDefault();
+  const yOffset = -150; // Adjust this value to set the distance from the top
+  const targetId = e.target.getAttribute('href').substring(1); // Get the target ID from the href attribute
+  const element = document.getElementById(targetId);
+  
+  if (element) {
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'});
+  } else {
+    // If element is not found, scroll to the top of the page
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+};
+
 function NavList() {
   const navItems = [
     { text: 'About', href: '#about' },
@@ -49,6 +64,7 @@ function NavList() {
           variants={items}>
           <a
             href={item.href}
+            onClick={handleClick}
             className='flex items-center hover:text-emerald text-bright-slate transition-colors'>
             {item.text}
           </a>
@@ -77,6 +93,7 @@ export function NavbarSimple() {
         <Typography
           as='a'
           href='#'
+          onClick={handleClick}
           variant='h6'
           className='mr-4 cursor-pointer py-1.5 text-bright-slate'>
           Alok
