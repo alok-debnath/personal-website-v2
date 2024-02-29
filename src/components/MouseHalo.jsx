@@ -17,7 +17,7 @@ const MouseHalo = () => {
 
   return (
     <div
-      className="halo hidden md:block"
+      className='halo hidden md:block'
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,

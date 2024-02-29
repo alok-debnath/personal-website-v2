@@ -15,15 +15,17 @@ const icon = {
 
 const PageLoader = () => (
   <motion.div
-    className='flex items-center justify-center min-w-max min-h-screen p-4 text-slate bg-navy'
+    className='flex min-h-screen min-w-max items-center justify-center bg-navy p-4 text-slate'
     initial={{ opacity: 1, background: 'rgb(10, 25, 37)' }}
     animate={{ opacity: 0, background: 'rgb(10, 25, 47)' }}
-    transition={{ duration: 2, ease: 'easeInOut', delay: 2 }}>
+    transition={{ duration: 2, ease: 'easeInOut', delay: 2 }}
+  >
     <div className='loader-container'>
       <motion.svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 100 100'
-        className='loader-item'>
+        className='loader-item'
+      >
         <motion.path
           d='M50 20 L80 80 L50 65 L20 80 Z'
           variants={icon}

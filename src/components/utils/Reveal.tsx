@@ -21,9 +21,7 @@ export const Reveal = ({ children, width = 'fit-content' }: Props) => {
   }, [isInView, maincontrols]);
 
   return (
-    <div
-      ref={ref}
-      style={{ position: 'relative', width }}>
+    <div ref={ref} style={{ position: 'relative', width }}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 30 },
@@ -31,7 +29,8 @@ export const Reveal = ({ children, width = 'fit-content' }: Props) => {
         }}
         initial='hidden'
         animate={maincontrols}
-        transition={{ duration: 0.5, delay: 0.4 }}>
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
         {children}
       </motion.div>
     </div>

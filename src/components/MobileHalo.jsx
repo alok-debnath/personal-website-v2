@@ -5,7 +5,7 @@ const MobileHalo = () => {
   const scale = useTransform(scrollYProgress, [1, 0], [0, 1.5]);
 
   return (
-    <div className='mobile-halo-div md:hidden w-max'>
+    <div className='mobile-halo-div w-max md:hidden'>
       <motion.div
         className='mobile-halo'
         style={{

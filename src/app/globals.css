@@ -8,10 +8,16 @@
   width: 900px;
   height: 900px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(80, 158, 126, 0.137) 0%, rgba(0, 0, 0, 0) 60%);
+  background: radial-gradient(
+    circle,
+    rgba(80, 158, 126, 0.137) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s, background .0.2s;
+  transition:
+    transform 0.2s,
+    background 0.2s;
 }
 
 .mobile-halo-div {
@@ -19,7 +25,9 @@
   z-index: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s, background .0.2s;
+  transition:
+    transform 0.2s,
+    background 0.2s;
   left: 50%;
   top: -50px;
 }
@@ -27,8 +35,11 @@
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(80, 158, 126, 0.37) 0%, rgba(0, 0, 0, 0) 60%);
-
+  background: radial-gradient(
+    circle,
+    rgba(80, 158, 126, 0.37) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
 }
 
 .content-section {
@@ -41,7 +52,11 @@
   display: flex;
   place-content: center;
   overflow: hidden;
-  background: radial-gradient(circle, rgba(80, 158, 126, 0.247) 0%, rgba(0, 0, 0, 0) 60%);
+  background: radial-gradient(
+    circle,
+    rgba(80, 158, 126, 0.247) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
   border-radius: 50%;
 }
 .loader-item {
