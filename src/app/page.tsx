@@ -72,21 +72,21 @@ const Home = () => {
                         <p className='text-emerald'>Hey there, I&apos;m</p>
                       </Reveal>
                     </div>
-                    <div className='col-span-12 md:col-span-9'>
+                    <div className='col-span-12 md:col-span-10'>
                       <Reveal>
                         <>
                           <h1 className={`${H1} text-bright-slate`}>
                             Alok Debnath.
                           </h1>
                           <h1 className={`${H1}`}>
-                            A web enthusiast on a journey of innovation.
+                            A web enthusiast on a journey of constant learning.
                           </h1>
                         </>
                       </Reveal>
                     </div>
-                    <div className='col-span-11 md:col-span-6'>
+                    <div className='col-span-11 md:col-span-8'>
                       <Reveal>
-                        <p>
+                        <p className='text-sm md:text-lg'>
                           I&apos;m an enthusiastic web developer eager to
                           transform ideas into remarkable digital experiences.
                           My passion lies in learning and contributing to
@@ -120,7 +120,7 @@ const Home = () => {
                         </h3>
                       </Reveal>
                     </div>
-                    <div className='col-span-12 md:col-span-7'>
+                    <div className='col-span-12'>
                       <Reveal>
                         <div className='space-y-4'>
                           <p>
@@ -151,29 +151,21 @@ const Home = () => {
                             development, including:
                           </p>
                           <div className='grid grid-cols-12'>
-                            <div className='col-span-12 md:col-span-10 lg:col-span-8'>
+                            <div className='col-span-12 md:col-span-8 lg:col-span-6'>
                               <ul className='grid list-inside list-disc grid-cols-2 gap-4'>
                                 <li>Next JS</li>
                                 <li>React JS</li>
-                                <li>Python</li>
-                                <li>Laravel</li>
                                 <li>JavaScript</li>
+                                {/* <li>Python</li> */}
+                                <li>HTML/CSS</li>
+                                <li>Laravel</li>
                                 <li>SQL</li>
                                 <li>MongoDB</li>
-                                <li>HTML/CSS</li>
                               </ul>
                             </div>
                           </div>
                         </div>
                       </Reveal>
-                    </div>
-                    <div className='col-span-12 md:col-span-5'>
-                      <p>
-                        I&apos;m a passionate web developer looking to gain
-                        practical experience in building exceptional digital
-                        experiences. I&apos;m eager to learn and contribute to
-                        innovative projects in the field.
-                      </p>
                     </div>
                   </div>
                   <div className='mx-5 my-10 grid grid-cols-12 gap-y-8 md:gap-x-14'>
@@ -193,9 +185,13 @@ const Home = () => {
                         </h3>
                       </Reveal>
                     </div>
-                    {jobData.map((job, index) => (
-                      <JobExperience key={index} job={job} />
-                    ))}
+                    <div className='col-span-12'>
+                      <div className='group grid grid-cols-12 gap-y-3'>
+                        {jobData.map((job, index) => (
+                          <JobExperience key={index} job={job} />
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className='col-span-1 hidden lg:block'></div>

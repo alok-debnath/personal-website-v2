@@ -67,3 +67,10 @@
   stroke-linejoin: round;
   stroke-linecap: round;
 }
+
+.group:hover .child {
+  opacity: 0.5;
+}
+.group:hover .child:hover {
+  opacity: 1;
+}

@@ -1,2 +1,26 @@
 {
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.minimap.autohide": true,
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.colorTheme": "Shades of Purple (Super Dark)",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "remote.SSH.remotePlatform": {
+    "*.gitpod.io": "linux"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
