@@ -193,18 +193,9 @@ const Home = () => {
                         </h3>
                       </Reveal>
                     </div>
-                    <div className='col-span-12'>
-                      <div className='grid grid-cols-12'>
-                        <div className='col-span-12 md:col-span-4'>
-                          <p className='text-sm font-semibold'>
-                            2024 — Present
-                          </p>
-                        </div>
-                        {jobData.map((job, index) => (
-                          <JobExperience key={index} job={job} />
-                        ))}
-                      </div>
-                    </div>
+                    {jobData.map((job, index) => (
+                      <JobExperience key={index} job={job} />
+                    ))}
                   </div>
                 </div>
                 <div className='col-span-1 hidden lg:block'></div>
