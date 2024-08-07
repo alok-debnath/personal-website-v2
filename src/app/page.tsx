@@ -6,9 +6,11 @@ import SocialIconsList from '@/components/SocialIconsList';
 import MouseHalo from '@/components/MouseHalo';
 import MobileHalo from '@/components/MobileHalo';
 import PageLoader from '@/components/PageLoader';
-import { Reveal } from '@/components/utils/Reveal';
+import JobExperience from '@/components/JobExperience';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Reveal } from '@/components/utils/Reveal';
+import { jobData } from '@/constants/JobData';
 
 // import styled, { keyframes } from 'styled-components';
 
@@ -198,27 +200,9 @@ const Home = () => {
                             2024 — Present
                           </p>
                         </div>
-                        <div className='col-span-12 space-y-3 md:col-span-8'>
-                          <a
-                            className='font-semibold text-bright-slate hover:text-emerald'
-                            href=''
-                          >
-                            Jr. Web Developer · Vandalay Business Solutions
-                          </a>
-                          <p className='text-sm'>
-                            Build and maintain critical components used to
-                            construct Klaviyo’s frontend, across the whole
-                            product. Work closely with cross-functional teams,
-                            including developers, designers, and product
-                            managers, to implement and advocate for best
-                            practices in web accessibility.
-                          </p>
-                          <ul className='flex flex-wrap text-xs'>
-                            <li className='bg-emerald/10 text-emerald py-1.5 px-3 rounded-2xl mt-2 mr-2'>React</li>
-                            <li className='bg-emerald/10 text-emerald py-1.5 px-3 rounded-2xl mt-2 mr-2'>JavaScript</li>
-                            <li className='bg-emerald/10 text-emerald py-1.5 px-3 rounded-2xl mt-2 mr-2'>TypeScript</li>
-                          </ul>
-                        </div>
+                        {jobData.map((job, index) => (
+                          <JobExperience key={index} job={job} />
+                        ))}
                       </div>
                     </div>
                   </div>
