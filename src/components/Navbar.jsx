@@ -48,7 +48,7 @@ const handleClick = (e) => {
 function NavList() {
   const navItems = [
     { text: 'About', href: '#about' },
-    { text: 'Experience', href: '#' },
+    { text: 'Experience', href: '#experience' },
     { text: 'Work', href: '#' },
     { text: 'Contact', href: '#' },
   ];

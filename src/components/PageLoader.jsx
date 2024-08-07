@@ -1,44 +1,45 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-const icon = {
-  hidden: {
-    opacity: 0,
-    pathLength: 0,
-    fill: 'rgba(255, 255, 255, 0)',
-  },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-    fill: 'rgba(255, 255, 255, 1)',
-  },
-};
+const greetings = [
+  'Hello',
+  'Hola',
+  'नमस्ते',
+  'Bonjour',
+  'こんにちは',
+  'Welcome',
+];
 
-const PageLoader = () => (
-  <motion.div
-    className='flex min-h-screen min-w-max items-center justify-center bg-navy p-4 text-slate'
-    initial={{ opacity: 1, background: 'rgb(10, 25, 37)' }}
-    animate={{ opacity: 0, background: 'rgb(10, 25, 47)' }}
-    transition={{ duration: 2, ease: 'easeInOut', delay: 2 }}
-  >
-    <div className='loader-container'>
-      <motion.svg
-        xmlns='http://www.w3.org/2000/svg'
-        viewBox='0 0 100 100'
-        className='loader-item'
+const PageLoader = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % greetings.length);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <motion.div
+      className='flex min-h-screen min-w-full items-center justify-center bg-navy text-slate'
+      initial={{ opacity: 1, background: 'rgb(10, 25, 37)' }}
+      animate={{ opacity: 0, background: 'rgb(10, 25, 47)' }}
+      transition={{ duration: 6, ease: 'easeInOut', delay: 2 }}
+    >
+      <motion.div
+        className='text-4xl md:text-5xl lg:text-6xl font-bold'
+        key={index}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.5 }}
+        transition={{ duration: 1 }}
       >
-        <motion.path
-          d='M50 20 L80 80 L50 65 L20 80 Z'
-          variants={icon}
-          initial='hidden'
-          animate='visible'
-          transition={{
-            default: { duration: 2, ease: 'easeInOut' },
-            fill: { duration: 2, ease: [1, 0, 0.8, 1] },
-          }}
-        />
-      </motion.svg>
-    </div>
-  </motion.div>
-);
+        {greetings[index]}
+      </motion.div>
+    </motion.div>
+  );
+};
 
 export default PageLoader;

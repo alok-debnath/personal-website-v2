@@ -34,7 +34,7 @@ const Home = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setPageJourney(1);
-    }, 3000);
+    }, 6000);
 
     return () => clearTimeout(timeoutId);
   }, []);
@@ -93,16 +93,21 @@ const Home = () => {
                         </p>
                       </Reveal>
                     </div>
-                    <div className='col-span-8 my-10'>
+                    <div className='col-span-8 my-2 mb-0 lg:my-10'>
                       <Reveal>
                         <ButtonDefault buttonLabel='Check out my GitHub!' />
+                      </Reveal>
+                    </div>
+                    <div className='col-span-12 lg:hidden'>
+                      <Reveal>
+                        <SocialIconsList />
                       </Reveal>
                     </div>
                   </div>
                   <div className='mx-5 my-10 grid grid-cols-12 gap-y-8 md:gap-x-14'>
                     <div className='col-span-12'>
                       <Reveal>
-                        <h3 id='about'>
+                        <h3 id='about' className='text-bright-slate'>
                           <ol className='list-decimal-leading-zero grid list-inside list-decimal grid-cols-1 gap-4'>
                             <li className='text-xl font-semibold'>
                               <span className='ms-2 text-3xl font-semibold'>
@@ -169,6 +174,54 @@ const Home = () => {
                       </p>
                     </div>
                   </div>
+                  <div className='mx-5 my-10 grid grid-cols-12 gap-y-8 md:gap-x-14'>
+                    <div className='col-span-12'>
+                      <Reveal>
+                        <h3 id='experience' className='text-bright-slate'>
+                          <ol
+                            start={2}
+                            className='list-decimal-leading-zero grid list-inside list-decimal grid-cols-1 gap-4'
+                          >
+                            <li className='text-xl font-semibold'>
+                              <span className='ms-2 text-3xl font-semibold'>
+                                Experience
+                              </span>
+                            </li>
+                          </ol>
+                        </h3>
+                      </Reveal>
+                    </div>
+                    <div className='col-span-12'>
+                      <div className='grid grid-cols-12'>
+                        <div className='col-span-12 md:col-span-4'>
+                          <p className='text-sm font-semibold'>
+                            2024 — Present
+                          </p>
+                        </div>
+                        <div className='col-span-12 space-y-3 md:col-span-8'>
+                          <a
+                            className='font-semibold text-bright-slate hover:text-emerald'
+                            href=''
+                          >
+                            Jr. Web Developer · Vandalay Business Solutions
+                          </a>
+                          <p className='text-sm'>
+                            Build and maintain critical components used to
+                            construct Klaviyo’s frontend, across the whole
+                            product. Work closely with cross-functional teams,
+                            including developers, designers, and product
+                            managers, to implement and advocate for best
+                            practices in web accessibility.
+                          </p>
+                          <ul className='flex flex-wrap text-xs'>
+                            <li className='bg-emerald/10 text-emerald py-1.5 px-3 rounded-2xl mt-2 mr-2'>React</li>
+                            <li className='bg-emerald/10 text-emerald py-1.5 px-3 rounded-2xl mt-2 mr-2'>JavaScript</li>
+                            <li className='bg-emerald/10 text-emerald py-1.5 px-3 rounded-2xl mt-2 mr-2'>TypeScript</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className='col-span-1 hidden lg:block'></div>
                 <div className='fixed right-0 top-0 me-3 hidden h-screen max-w-fit items-center px-4 lg:flex'>
@@ -179,7 +232,7 @@ const Home = () => {
                           writingMode: 'vertical-rl',
                           textOrientation: 'mixed',
                         }}
-                        className='transition-transform duration-300 ease-in-out group-hover:translate-y-[-5px] group-hover:transform group-hover:text-emerald'
+                        className='text-sm transition-transform duration-300 ease-in-out group-hover:translate-y-[-5px] group-hover:transform group-hover:text-emerald'
                       >
                         alokdebnath.in@gmail.com
                       </p>

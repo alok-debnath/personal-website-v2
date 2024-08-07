@@ -84,7 +84,7 @@ const socialIcons = [
 const SocialIconsList = () => {
   return (
     <motion.ul
-      className='container grid grid-cols-1 gap-y-0 text-center'
+      className='container grid grid-cols-4 gap-y-0 text-center lg:grid-cols-1'
       variants={container}
       initial='hidden'
       animate='visible'
