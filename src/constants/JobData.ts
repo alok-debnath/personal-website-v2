@@ -33,14 +33,5 @@ export const jobData: Job[] = [
       'Learned multiple programming languages used in web development, including HTML, CSS, JavaScript, Python, Django. Through working on full-stack projects, I have gained experience in both front-end and back-end development. Additionally, I have developed strong skills in problem-solving, debugging, and troubleshooting web applications. This solid foundation in web development will serve as a robust starting point for my future career in this field.',
     skills: ['Django', 'Bootstrap 5', 'JavaScript', 'HTML & CSS'],
   },
-  {
-    href: 'https://synnefo.in',
-    timeframe: 'December 2022 — March 2023',
-    title: 'Full-Stack web developer (Intern) · Synnefo solutions',
-    subTitles: [],
-    description:
-      'Learned multiple programming languages used in web development, including HTML, CSS, JavaScript, Python, Django. Through working on full-stack projects, I have gained experience in both front-end and back-end development. Additionally, I have developed strong skills in problem-solving, debugging, and troubleshooting web applications. This solid foundation in web development will serve as a robust starting point for my future career in this field.',
-    skills: ['Django', 'Bootstrap 5', 'JavaScript', 'HTML & CSS'],
-  },
   // Add more job objects here as needed
 ];

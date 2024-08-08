@@ -11,10 +11,11 @@
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@material-tailwind/react": "^2.1.9",
-    "framer-motion": "^11.3.21",
+    "framer-motion": "^11.3.24",
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "sass": "^1.77.8",
     "styled-components": "^6.1.12"
   },
   "devDependencies": {
@@ -24,10 +25,10 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.8.0",
     "eslint-config-next": "14.2.5",
-    "postcss": "^8.4.40",
+    "postcss": "^8.4.41",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
-    "tailwindcss": "^3.4.7",
+    "tailwindcss": "^3.4.9",
     "typescript": "^5.5.4"
   }
 }

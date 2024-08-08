@@ -8,4 +8,14 @@ tasks:
   - init: pnpm install && pnpm run build
     command: pnpm run dev
 
-
+vscode:
+    extensions:
+        - bradlc.vscode-tailwindcss
+        - oderwat.indent-rainbow
+        - PKief.material-icon-theme
+        - ahmadawais.shades-of-purple
+        - eamodio.gitlens
+        - ms-vscode.vscode-typescript-next
+        - christian-kohler.path-intellisense
+        - esbenp.prettier-vscode
+        - aaron-bond.better-comments

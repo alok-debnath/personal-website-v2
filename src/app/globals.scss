@@ -68,9 +68,12 @@
   stroke-linecap: round;
 }
 
-.group:hover .child {
-  opacity: 0.5;
-}
-.group:hover .child:hover {
-  opacity: 1;
+@media (min-width: 768px) {
+  .group:hover .child {
+    opacity: 0.5;
+  }
+
+  .group:hover .child:hover {
+    opacity: 1;
+  }
 }
