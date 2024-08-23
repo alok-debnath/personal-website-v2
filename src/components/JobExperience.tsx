@@ -1,12 +1,13 @@
 import React from 'react';
 import { Reveal } from './utils/Reveal';
+import HyperLinks from './HyperLinks';
 
 interface Job {
   href: string;
   timeframe: string;
   title: string;
   subTitles: string[];
-  description: string;
+  description: React.ReactNode;
   skills: string[];
 }
 
@@ -24,14 +25,11 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
           </div>
           <div className='md:hover:blue-gray-500/20 col-span-12 cursor-pointer space-y-3 transition duration-300 md:col-span-8 md:rounded-lg md:px-5 md:py-3 md:hover:bg-blue-gray-500/10 md:hover:shadow-md'>
             <span className='inline-flex items-center fill-bright-slate font-semibold text-bright-slate hover:fill-emerald hover:text-emerald'>
-              <a
+              <HyperLinks
                 className=''
-                target='_blank'
-                rel='noopener noreferrer'
                 href={job.href}
-              >
-                {job.title}
-              </a>
+                content={job.title}
+              />
             </span>
             <span>
               <ul className='text-md font-semibold'>
@@ -42,7 +40,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
                 ))}
               </ul>
             </span>
-            <p className='text-sm'>{job.description}</p>
+            <span className='text-sm'>{job.description}</span>
             <ul className='flex flex-wrap text-xs'>
               {job.skills.map((skill, index) => (
                 <li

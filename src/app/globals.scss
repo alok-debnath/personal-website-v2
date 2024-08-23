@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background-color: rgba(80, 127, 158, 0.603);
+  color: #ffffff;
+}
+
 .halo {
   position: fixed;
   z-index: 0;
@@ -68,7 +73,7 @@
   stroke-linecap: round;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
   .group:hover .child {
     opacity: 0.5;
   }

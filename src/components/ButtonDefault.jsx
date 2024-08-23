@@ -1,11 +1,11 @@
 import { Button } from '@material-tailwind/react';
 
-export function ButtonDefault({
+const ButtonDefault = ({
   buttonLabel,
   size = 'md',
   className = '',
   fullWidth = false,
-}) {
+}) => {
   return (
     <Button
       fullWidth={fullWidth}
@@ -17,4 +17,6 @@ export function ButtonDefault({
       </span>
     </Button>
   );
-}
+};
+
+export default ButtonDefault;

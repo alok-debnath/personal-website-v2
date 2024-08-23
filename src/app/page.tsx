@@ -1,6 +1,6 @@
 'use client';
-import { NavbarSimple } from '@/components/Navbar';
-import { ButtonDefault } from '@/components/Button';
+import NavbarSimple from '@/components/NavbarSimple';
+import ButtonDefault from '@/components/ButtonDefault';
 import Footer from '@/components/Footer';
 import SocialIconsList from '@/components/SocialIconsList';
 import MouseHalo from '@/components/MouseHalo';
@@ -36,7 +36,7 @@ const Home = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setPageJourney(1);
-    }, 6000);
+    }, 4200);
 
     return () => clearTimeout(timeoutId);
   }, []);
@@ -45,7 +45,7 @@ const Home = () => {
       <div
         className={`${
           pageJourney !== 0
-            ? 'min-w-screen mx-auto min-h-screen p-4 text-slate'
+            ? 'min-w-screen mx-auto min-h-screen text-slate'
             : ''
         } bg-navy`}
       >
@@ -57,16 +57,19 @@ const Home = () => {
         >
           <div className={`${pageJourney === 1 ? '' : 'hidden'}`}>
             <MouseHalo />
-            <div className='content-section mx-auto max-w-screen-2xl'>
+            <div className='content-section max-w-screen-2xl'>
               <MobileHalo />
               <NavbarSimple />
-              <div className='grid grid-cols-12'>
+              <div className='mx-2 grid grid-cols-12'>
                 <div className='col-span-1 hidden lg:block'></div>
                 <div className='fixed left-0 top-0 ms-2 hidden h-screen items-center px-4 lg:flex'>
                   <SocialIconsList />
                 </div>
                 <div className='col-span-12 mx-3 mt-10 lg:col-span-10'>
-                  <div className='grid grid-cols-12 gap-2 md:gap-4'>
+                  <div
+                    className='grid grid-cols-12 gap-2 md:gap-4'
+                    id='username'
+                  >
                     <div className='col-span-8'>
                       <Reveal>
                         <p className='text-emerald'>Hey there, I&apos;m</p>
@@ -106,13 +109,19 @@ const Home = () => {
                       </Reveal>
                     </div>
                   </div>
-                  <div className='mx-5 my-10 grid grid-cols-12 gap-y-8 md:gap-x-14'>
+                  <div
+                    className='mx-1 my-10 grid grid-cols-12 gap-y-8 md:mx-5 md:gap-x-14'
+                    id='about'
+                  >
                     <div className='col-span-12'>
                       <Reveal>
-                        <h3 id='about' className='text-bright-slate'>
+                        <h3 className='text-bright-slate'>
                           <ol className='list-decimal-leading-zero grid list-inside list-decimal grid-cols-1 gap-4'>
                             <li className='text-xl font-semibold'>
-                              <span className='ms-2 text-3xl font-semibold'>
+                              <span
+                                id='aboutme'
+                                className='ms-2 text-3xl font-semibold'
+                              >
                                 About Me
                               </span>
                             </li>
@@ -121,8 +130,8 @@ const Home = () => {
                       </Reveal>
                     </div>
                     <div className='col-span-12'>
-                      <Reveal>
-                        <div className='space-y-4'>
+                      <div className='space-y-4'>
+                        <Reveal>
                           <p>
                             Hi there! I&apos;m Alok Debnath, a passionate web
                             developer. My journey into coding began during my
@@ -133,26 +142,17 @@ const Home = () => {
                             eventually paved the way for my entry into the
                             exciting world of web development.
                           </p>
-                          <p>
-                            I had the privilege of working at{' '}
-                            <a className='text-emerald' href=''>
-                              Vandalay Business Solutions
-                            </a>
-                            , an experience that not only honed my skills but
-                            also encouraged continuous learning amidst
-                            real-world projects. Exploring and embracing new
-                            technologies became an integral part of my daily
-                            routine. I relished the opportunity to integrate my
-                            knowledge across diverse domains to craft innovative
-                            solutions.
-                          </p>
+                        </Reveal>
+                        <Reveal>
                           <p>
                             I have expertise in several areas of web
                             development, including:
                           </p>
+                        </Reveal>
+                        <Reveal>
                           <div className='grid grid-cols-12'>
                             <div className='col-span-12 md:col-span-8 lg:col-span-6'>
-                              <ul className='grid list-inside list-disc grid-cols-2 gap-4'>
+                              <ul className='grid list-inside list-disc grid-cols-2 gap-2 md:gap-4'>
                                 <li>Next JS</li>
                                 <li>React JS</li>
                                 <li>JavaScript</li>
@@ -164,11 +164,14 @@ const Home = () => {
                               </ul>
                             </div>
                           </div>
-                        </div>
-                      </Reveal>
+                        </Reveal>
+                      </div>
                     </div>
                   </div>
-                  <div className='mx-5 my-10 grid grid-cols-12 gap-y-8 md:gap-x-14'>
+                  <div
+                    className='mx-1 my-10 grid grid-cols-12 gap-y-8 md:mx-5 md:gap-x-14'
+                    id='experience'
+                  >
                     <div className='col-span-12'>
                       <Reveal>
                         <h3 id='experience' className='text-bright-slate'>
@@ -203,7 +206,7 @@ const Home = () => {
                           writingMode: 'vertical-rl',
                           textOrientation: 'mixed',
                         }}
-                        className='text-sm transition-transform duration-300 ease-in-out group-hover:translate-y-[-5px] group-hover:transform group-hover:text-emerald'
+                        className='text-sm italic transition-transform duration-300 ease-in-out group-hover:translate-y-[-5px] group-hover:transform group-hover:text-emerald'
                       >
                         alokdebnath.in@gmail.com
                       </p>

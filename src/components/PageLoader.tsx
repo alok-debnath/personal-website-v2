@@ -15,11 +15,18 @@ const PageLoader = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % greetings.length);
-    }, 1000);
+      setIndex((prevIndex) => {
+        if (prevIndex < greetings.length - 1) {
+          return prevIndex + 1;
+        } else {
+          clearInterval(interval);
+          return prevIndex;
+        }
+      });
+    }, 600);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [greetings.length]);
 
   return (
     <motion.div
@@ -29,9 +36,9 @@ const PageLoader = () => {
       transition={{ duration: 6, ease: 'easeInOut', delay: 2 }}
     >
       <motion.div
-        className='text-4xl md:text-5xl lg:text-6xl font-bold'
+        className='text-4xl font-bold md:text-5xl lg:text-6xl'
         key={index}
-        initial={{ opacity: 0, scale: 0.5 }}
+        initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.5 }}
         transition={{ duration: 1 }}

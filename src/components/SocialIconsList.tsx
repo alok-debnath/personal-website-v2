@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import HyperLinks from './HyperLinks';
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -95,11 +96,15 @@ const SocialIconsList = () => {
           className='item group cursor-pointer'
           variants={item}
         >
-          <a href={social.href} target='_blank'>
-            <div className='p-4 transition-transform duration-300 ease-in-out group-hover:translate-y-[-5px] group-hover:transform'>
-              {social.icon}
-            </div>
-          </a>
+          <HyperLinks
+            className=''
+            href={social.href}
+            content={
+              <div className='p-4 transition-transform duration-300 ease-in-out group-hover:translate-y-[-5px] group-hover:transform'>
+                {social.icon}
+              </div>
+            }
+          />
         </motion.li>
       ))}
     </motion.ul>
