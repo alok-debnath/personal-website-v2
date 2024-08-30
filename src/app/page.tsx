@@ -57,7 +57,7 @@ const Home = () => {
         >
           <div className={`${pageJourney === 1 ? '' : 'hidden'}`}>
             <MouseHalo />
-            <div className='content-section max-w-screen-2xl'>
+            <div className='content-section'>
               <MobileHalo />
               <NavbarSimple />
               <div className='mx-2 grid grid-cols-12'>
