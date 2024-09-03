@@ -3,6 +3,7 @@ import { Button } from '@material-tailwind/react';
 const ButtonDefault = ({
   buttonLabel,
   size = 'md',
+  onclick = () => {},
   className = '',
   fullWidth = false,
 }) => {
@@ -10,11 +11,10 @@ const ButtonDefault = ({
     <Button
       fullWidth={fullWidth}
       size={size}
-      className={`group border border-emerald bg-transparent normal-case duration-300 ease-in-out hover:border-slate hover:bg-emerald ${className}`}
+      onClick={onclick}
+      className={`group border border-emerald bg-transparent normal-case text-emerald shadow-sm duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-emerald/30 ${className}`}
     >
-      <span className='text-emerald duration-300 ease-in-out group-hover:text-black'>
-        {buttonLabel}
-      </span>
+      <div className=''>{buttonLabel}</div>
     </Button>
   );
 };

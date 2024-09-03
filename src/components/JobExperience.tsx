@@ -23,13 +23,9 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
           <div className='col-span-12 md:col-span-4 md:mt-3'>
             <p className='text-sm font-semibold'>{job.timeframe}</p>
           </div>
-          <div className='md:hover:blue-gray-500/20 col-span-12 cursor-pointer space-y-3 transition duration-300 md:col-span-8 md:rounded-lg md:px-5 md:py-3 md:hover:bg-blue-gray-500/10 md:hover:shadow-md'>
-            <span className='inline-flex items-center fill-bright-slate font-semibold text-bright-slate hover:fill-emerald hover:text-emerald'>
-              <HyperLinks
-                className=''
-                href={job.href}
-                content={job.title}
-              />
+          <div className='md:hover:blue-gray-500/20 col-span-12 space-y-3 transition duration-300 md:col-span-8 md:rounded-lg md:px-5 md:py-3 md:hover:bg-blue-gray-500/10 md:hover:shadow-md'>
+            <span className='inline-flex cursor-pointer items-center fill-bright-slate font-semibold text-bright-slate hover:fill-emerald hover:text-emerald'>
+              <HyperLinks className='' href={job.href} content={job.title} />
             </span>
             <span>
               <ul className='text-md font-semibold'>

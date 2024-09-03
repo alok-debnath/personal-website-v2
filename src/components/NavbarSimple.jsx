@@ -162,7 +162,14 @@ const NavbarSimple = () => {
             <ButtonDefault
               fullWidth
               size='sm'
-              className=''
+              onclick={() =>
+                window.open(
+                  './resume-sample.pdf',
+                  '_blank',
+                  'noopener,noreferrer',
+                )
+              }
+              className='hover:translate-x-0 hover:translate-y-0 hover:bg-emerald hover:text-black hover:shadow-none'
               buttonLabel='Resume'
             />
           </div>
