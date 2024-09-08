@@ -166,7 +166,7 @@ const NavbarSimple = () => {
                 window.open(
                   './resume-sample.pdf',
                   '_blank',
-                  'noopener,noreferrer',
+                  // 'noopener,noreferrer',
                 )
               }
               className='hover:translate-x-0 hover:translate-y-0 hover:bg-emerald hover:text-black hover:shadow-none'

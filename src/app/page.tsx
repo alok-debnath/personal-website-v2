@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Reveal } from '@/components/utils/Reveal';
 import { jobData } from '@/constants/JobData';
+import HyperLinks from '@/components/HyperLinks';
 
 // import styled, { keyframes } from 'styled-components';
 
@@ -105,7 +106,7 @@ const Home = () => {
                             window.open(
                               './resume-sample.pdf',
                               '_blank',
-                              'noopener,noreferrer',
+                              // 'noopener,noreferrer',
                             )
                           }
                           buttonLabel='Check out my Resume!'
@@ -210,15 +211,15 @@ const Home = () => {
                 <div className='fixed right-0 top-0 me-3 hidden h-screen max-w-fit items-center px-4 lg:flex'>
                   <div className='group grid cursor-pointer grid-cols-1 gap-y-6 p-3 text-center'>
                     <Reveal>
-                      <p
+                      <HyperLinks
+                        className='text-sm italic transition-transform duration-300 ease-in-out group-hover:translate-y-[-5px] group-hover:transform group-hover:text-emerald'
                         style={{
                           writingMode: 'vertical-rl',
                           textOrientation: 'mixed',
                         }}
-                        className='text-sm italic transition-transform duration-300 ease-in-out group-hover:translate-y-[-5px] group-hover:transform group-hover:text-emerald'
-                      >
-                        alokdebnath.in@gmail.com
-                      </p>
+                        href='mailto:alokdebnath.in@gmail.com'
+                        content='alokdebnath.in@gmail.com'
+                      />
                     </Reveal>
                   </div>
                 </div>
