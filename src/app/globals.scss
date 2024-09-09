@@ -74,11 +74,11 @@
 }
 
 @media (min-width: 720px) {
-  .group:hover .child {
+  .group-main:hover .child {
     opacity: 0.5;
   }
 
-  .group:hover .child:hover {
+  .group-main:hover .child:hover {
     opacity: 1;
   }
 }

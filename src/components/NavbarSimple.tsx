@@ -11,6 +11,17 @@ import { motion } from 'framer-motion';
 import ButtonDefault from './ButtonDefault';
 import useActiveSubheading from '@/hooks/useActiveSubheading';
 
+type NavItem = {
+  text: string;
+  href: string;
+};
+
+type Subheading = {
+  id: string;
+  name: string;
+};
+
+// Animation variants
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
@@ -31,11 +42,11 @@ const items = {
   },
 };
 
-const handleClick = (e) => {
+const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
   const yOffset = -100; // Adjust this value to set the distance from the top
-  const targetId = e.target.getAttribute('href').substring(1); // Get the target ID from the href attribute
-  const element = document.getElementById(targetId);
+  const targetId = e.currentTarget.getAttribute('href')?.substring(1); // Get the target ID from the href attribute
+  const element = targetId ? document.getElementById(targetId) : null;
 
   if (element) {
     const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
@@ -46,8 +57,12 @@ const handleClick = (e) => {
   }
 };
 
-function NavList({ activeItem }) {
-  const navItems = [
+interface NavListProps {
+  activeItem: string;
+}
+
+const NavList: React.FC<NavListProps> = ({ activeItem }) => {
+  const navItems: NavItem[] = [
     { text: 'About', href: '#about' },
     { text: 'Experience', href: '#experience' },
     { text: 'Projects', href: '#' },
@@ -62,11 +77,8 @@ function NavList({ activeItem }) {
       animate='visible'
     >
       {navItems.map((item, index) => (
-        <motion.Typography
+        <motion.li
           key={index}
-          as='li'
-          variant='small'
-          color='blue-gray'
           className='item p-1 font-medium'
           variants={items}
         >
@@ -77,28 +89,28 @@ function NavList({ activeItem }) {
           >
             {item.text}
           </a>
-        </motion.Typography>
+        </motion.li>
       ))}
     </motion.ul>
   );
-}
+};
 
-const NavbarSimple = () => {
-  const [openNav, setOpenNav] = React.useState(false);
+const NavbarSimple: React.FC = () => {
+  const [openNav, setOpenNav] = React.useState<boolean>(false);
 
-  const handleWindowResize = () =>
-    window.innerWidth >= 960 && setOpenNav(false);
+  const handleWindowResize = () => {
+    if (window.innerWidth >= 960) setOpenNav(false);
+  };
 
   React.useEffect(() => {
     window.addEventListener('resize', handleWindowResize);
-
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
 
-  const navRef = useRef(null);
-  const subheadings = [
+  const navRef = useRef<HTMLDivElement | null>(null);
+  const subheadings: Subheading[] = [
     { id: 'username', name: 'Alok' },
     { id: 'aboutme', name: 'About' },
     { id: 'experience', name: 'Experience' },
@@ -116,14 +128,22 @@ const NavbarSimple = () => {
       <Navbar
         ref={navRef}
         className='mx-auto max-w-screen-2xl rounded-none border-light-navy bg-light-navy px-6 py-3 shadow-none backdrop-blur md:top-4 md:rounded-xl'
+        placeholder=''
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <div className='flex items-center justify-between text-blue-gray-900'>
           <Typography
             as='a'
             href='#'
-            onClick={handleClick}
+            onClick={(e) =>
+              handleClick(e as React.MouseEvent<HTMLAnchorElement>)
+            }
             variant='h6'
             className='mr-4 min-w-44 cursor-pointer py-1.5 text-bright-slate'
+            placeholder=''
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {activeSubheading}
           </Typography>
@@ -142,6 +162,9 @@ const NavbarSimple = () => {
             className='ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden'
             ripple={false}
             onClick={() => setOpenNav(!openNav)}
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {openNav ? (
               <XMarkIcon
@@ -162,13 +185,7 @@ const NavbarSimple = () => {
             <ButtonDefault
               fullWidth
               size='sm'
-              onclick={() =>
-                window.open(
-                  './resume-sample.pdf',
-                  '_blank',
-                  // 'noopener,noreferrer',
-                )
-              }
+              onClick={() => window.open('./resume.pdf', '_blank')}
               className='hover:translate-x-0 hover:translate-y-0 hover:bg-emerald hover:text-black hover:shadow-none'
               buttonLabel='Resume'
             />

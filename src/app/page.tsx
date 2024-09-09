@@ -102,13 +102,7 @@ const Home = () => {
                     <div className='col-span-8 my-2 mb-0 lg:my-10'>
                       <Reveal>
                         <ButtonDefault
-                          onclick={() =>
-                            window.open(
-                              './resume-sample.pdf',
-                              '_blank',
-                              // 'noopener,noreferrer',
-                            )
-                          }
+                          onClick={() => window.open('./resume.pdf', '_blank')}
                           buttonLabel='Check out my Resume!'
                         />
                       </Reveal>
@@ -199,7 +193,7 @@ const Home = () => {
                       </Reveal>
                     </div>
                     <div className='col-span-12'>
-                      <div className='group grid grid-cols-12 gap-y-6'>
+                      <div className='group-main grid grid-cols-12 gap-y-6'>
                         {jobData.map((job, index) => (
                           <JobExperience key={index} job={job} />
                         ))}
