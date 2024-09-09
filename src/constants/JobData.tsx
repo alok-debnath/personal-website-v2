@@ -1,5 +1,3 @@
-import HyperLinks from '@/components/HyperLinks';
-
 interface Job {
   href: string;
   timeframe: string;
@@ -45,12 +43,12 @@ export const jobData: Job[] = [
       <>
         <p>
           Learned multiple programming languages used in web development,
-          including HTML, CSS, JavaScript, Python, Django. Through working on
-          full-stack projects, I have gained experience in both front-end and
-          back-end development. Additionally, I have developed strong skills in
+          including HTML, CSS, JavaScript, Python, and Django. Through working
+          on full-stack projects, I gained experience in both front-end and
+          back-end development. Additionally, I developed strong skills in
           problem-solving, debugging, and troubleshooting web applications. This
-          solid foundation in web development will serve as a robust starting
-          point for my future career in this field.
+          solid foundation in web development has served as a robust starting
+          point in my career.
         </p>
       </>
     ),

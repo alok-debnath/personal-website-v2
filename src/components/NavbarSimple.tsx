@@ -140,12 +140,28 @@ const NavbarSimple: React.FC = () => {
               handleClick(e as React.MouseEvent<HTMLAnchorElement>)
             }
             variant='h6'
-            className='mr-4 min-w-44 cursor-pointer py-1.5 text-bright-slate'
+            className='flex items-center justify-center whitespace-nowrap text-bright-slate'
             placeholder=''
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
           >
-            {activeSubheading}
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='34'
+              height='34'
+              viewBox='0 0 250 250'
+              className='mr-2 hidden md:block'
+            >
+              <g fill='#0bbf64' transform='translate(45, 26) scale(6)'>
+                <svg>
+                  <g fill='#64ffdb'>
+                    <path d='M13.11 2.16L.88 32.49H0L13.11 0l13.1 32.49h-.87L13.11 2.16z' />
+                    <path d='M13.11 25.74l-2.68 6.75H6.94l6.18-15.51 6.16 15.51H15.8l-2.69-6.75z' />
+                  </g>
+                </svg>
+              </g>
+            </svg>
+            <span style={{ marginTop: 4 }}>{activeSubheading}</span>
           </Typography>
           <div className='mr-4 hidden lg:block'>
             <NavList activeItem={activeSubheading} />
