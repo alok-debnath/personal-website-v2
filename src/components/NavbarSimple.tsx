@@ -140,7 +140,7 @@ const NavbarSimple: React.FC = () => {
               handleClick(e as React.MouseEvent<HTMLAnchorElement>)
             }
             variant='h6'
-            className='flex items-center justify-center whitespace-nowrap text-bright-slate'
+            className='flex min-w-40 items-center justify-start whitespace-nowrap text-bright-slate'
             placeholder=''
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
@@ -161,7 +161,7 @@ const NavbarSimple: React.FC = () => {
                 </svg>
               </g>
             </svg>
-            <span style={{ marginTop: 4 }}>{activeSubheading}</span>
+            <span className='mt-1'>{activeSubheading}</span>
           </Typography>
           <div className='mr-4 hidden lg:block'>
             <NavList activeItem={activeSubheading} />
