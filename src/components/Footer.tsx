@@ -9,19 +9,19 @@ const Footer = () => {
             Built by yours truly using{' '}
             <HyperLinks
               href='https://nextjs.org'
-              className='text-bright-slate/95 transition-colors hover:text-emerald'
+              className='text-white transition-colors hover:text-emerald'
               content='Next.js'
             />{' '}
             and{' '}
             <HyperLinks
               href='https://tailwindcss.com'
-              className='text-bright-slate/95 transition-colors hover:text-emerald'
+              className='text-white transition-colors hover:text-emerald'
               content='Tailwind CSS'
             />
             , all from{' '}
             <HyperLinks
               href='https://code.visualstudio.com'
-              className='text-bright-slate/95 transition-colors hover:text-emerald'
+              className='text-white transition-colors hover:text-emerald'
               content='Visual Studio Code'
             />
             . Self-hosted and styled to impress.
