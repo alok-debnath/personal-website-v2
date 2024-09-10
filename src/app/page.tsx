@@ -119,7 +119,7 @@ const Home = () => {
                   >
                     <div className='col-span-12'>
                       <Reveal>
-                        <h3 className='text-bright-slate'>
+                        <h2 className='text-bright-slate'>
                           <ol className='list-decimal-leading-zero grid list-inside list-decimal grid-cols-1 gap-4'>
                             <li className='text-xl font-semibold'>
                               <span
@@ -130,7 +130,7 @@ const Home = () => {
                               </span>
                             </li>
                           </ol>
-                        </h3>
+                        </h2>
                       </Reveal>
                     </div>
                     <div className='col-span-12'>
@@ -178,7 +178,7 @@ const Home = () => {
                   >
                     <div className='col-span-12'>
                       <Reveal>
-                        <h3 id='experience' className='text-bright-slate'>
+                        <h2 id='experience' className='text-bright-slate'>
                           <ol
                             start={2}
                             className='list-decimal-leading-zero grid list-inside list-decimal grid-cols-1 gap-4'
@@ -189,7 +189,7 @@ const Home = () => {
                               </span>
                             </li>
                           </ol>
-                        </h3>
+                        </h2>
                       </Reveal>
                     </div>
                     <div className='col-span-12'>

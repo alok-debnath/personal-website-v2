@@ -181,6 +181,7 @@ const NavbarSimple: React.FC = () => {
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
+            aria-label='Toggle topnav'
           >
             {openNav ? (
               <XMarkIcon

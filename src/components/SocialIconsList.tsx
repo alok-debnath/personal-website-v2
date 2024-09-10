@@ -98,6 +98,7 @@ const SocialIconsList = () => {
           <HyperLinks
             className=''
             href={social.href}
+            ariaLabel={social.label}
             content={
               <div className='p-4 transition-transform duration-300 ease-in-out group-hover:translate-y-[-5px] group-hover:transform'>
                 {social.icon}

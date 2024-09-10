@@ -28,6 +28,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
           <HyperLinks
             className='md:hover:blue-gray-500/20 group col-span-12 space-y-3 transition duration-300 md:col-span-8 md:cursor-pointer md:rounded-lg md:px-5 md:py-3 md:hover:bg-blue-gray-500/10 md:hover:shadow-md'
             href={isMobile ? '' : job.href}
+            as={isMobile ? 'div' : 'a'}
             content={
               <>
                 <span
