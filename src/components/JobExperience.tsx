@@ -31,7 +31,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
             content={
               <>
                 <span
-                  className='inline-block items-baseline fill-bright-slate font-semibold text-bright-slate hover:fill-emerald hover:text-emerald md:group-hover:fill-emerald md:group-hover:text-emerald cursor-pointer'
+                  className='group/span inline-block cursor-pointer items-baseline fill-bright-slate font-semibold text-bright-slate hover:fill-emerald hover:text-emerald md:group-hover:fill-emerald md:group-hover:text-emerald'
                   onClick={
                     isMobile
                       ? () =>
@@ -44,7 +44,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
                     xmlns='http://www.w3.org/2000/svg'
                     viewBox='0 0 20 20'
                     fill='currentColor'
-                    className='ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform motion-reduce:transition-none md:group-hover:-translate-y-1 md:group-hover:translate-x-1'
+                    className='ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/span:-translate-y-1 group-hover/span:translate-x-1 motion-reduce:transition-none md:group-hover:-translate-y-1 md:group-hover:translate-x-1'
                     aria-hidden='true'
                   >
                     <path
