@@ -38,7 +38,7 @@ const Home = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setPageJourney(1);
-    }, 4200);
+    }, 4300);
 
     return () => clearTimeout(timeoutId);
   }, []);

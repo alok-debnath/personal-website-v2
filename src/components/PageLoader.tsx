@@ -14,19 +14,22 @@ const PageLoader = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => {
-        if (prevIndex < greetings.length - 1) {
-          return prevIndex + 1;
-        } else {
-          clearInterval(interval);
-          return prevIndex;
-        }
-      });
-    }, 600);
+    const interval = setInterval(
+      () => {
+        setIndex((prevIndex) => {
+          if (prevIndex < greetings.length - 1) {
+            return prevIndex + 1;
+          } else {
+            clearInterval(interval);
+            return prevIndex;
+          }
+        });
+      },
+      index === 0 ? 900 : 600,
+    );
 
     return () => clearInterval(interval);
-  }, [greetings.length]);
+  }, [index, greetings]);
 
   return (
     <motion.div
