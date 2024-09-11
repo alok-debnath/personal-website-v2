@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 import { Reveal } from '@/components/utils/Reveal';
 import { jobData } from '@/constants/JobData';
 import HyperLinks from '@/components/HyperLinks';
+import { projectsData } from '@/constants/ProjectsData';
 
 // import styled, { keyframes } from 'styled-components';
 
@@ -178,7 +179,7 @@ const Home = () => {
                   >
                     <div className='col-span-12'>
                       <Reveal>
-                        <h2 id='experience' className='text-bright-slate'>
+                        <h2 className='text-bright-slate'>
                           <ol
                             start={2}
                             className='list-decimal-leading-zero grid list-inside list-decimal grid-cols-1 gap-4'
@@ -196,6 +197,34 @@ const Home = () => {
                       <div className='group-main grid grid-cols-12 gap-y-6'>
                         {jobData.map((job, index) => (
                           <JobExperience key={index} job={job} />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className='mx-1 my-10 grid grid-cols-12 gap-y-8 md:mx-5 md:gap-x-14'
+                    id='projects'
+                  >
+                    <div className='col-span-12'>
+                      <Reveal>
+                        <h2 className='text-bright-slate'>
+                          <ol
+                            start={3}
+                            className='list-decimal-leading-zero grid list-inside list-decimal grid-cols-1 gap-4'
+                          >
+                            <li className='text-xl font-semibold'>
+                              <span className='ms-2 text-3xl font-semibold'>
+                                Projects
+                              </span>
+                            </li>
+                          </ol>
+                        </h2>
+                      </Reveal>
+                    </div>
+                    <div className='col-span-12'>
+                      <div className='group-main group/main grid grid-cols-12 gap-y-6'>
+                        {projectsData.map((projects, index) => (
+                          <JobExperience key={index} job={projects} />
                         ))}
                       </div>
                     </div>

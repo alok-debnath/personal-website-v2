@@ -2,10 +2,12 @@ import React from 'react';
 import { Reveal } from './utils/Reveal';
 import HyperLinks from './HyperLinks';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import Image, { StaticImageData } from 'next/image';
 
 interface Job {
   href: string;
-  timeframe: string;
+  timeframe?: string;
+  projectImage?: null | StaticImageData;
   title: string;
   subTitles: string[];
   description: React.ReactNode;
@@ -17,13 +19,27 @@ interface JobExperienceProps {
 }
 
 const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
-  const isMobile = useMediaQuery('(max-width: 720px)');
+  const isMobile = useMediaQuery('(max-width: 719px)');
   return (
     <div className='child col-span-12 transition duration-300'>
-      <Reveal>
+      <Reveal width='100%'>
         <div className='grid grid-cols-12'>
-          <div className='col-span-12 md:col-span-4 md:mt-3'>
-            <p className='text-sm font-semibold'>{job.timeframe}</p>
+          <div
+            className={`col-span-12 md:col-span-4 md:mt-3 ${job.projectImage && isMobile ? 'order-last mt-4' : ''}`}
+          >
+            {job.projectImage ? (
+              <Image
+                src={job.projectImage}
+                alt={job.title}
+                width={200}
+                height={48}
+                decoding='async'
+                loading='lazy'
+                className='rounded border-2 border-slate/20 transition md:group-hover/main:border-slate/40'
+              />
+            ) : (
+              <p className='text-sm font-semibold'>{job.timeframe}</p>
+            )}
           </div>
           <HyperLinks
             className='md:hover:blue-gray-500/20 group col-span-12 space-y-3 transition duration-300 md:col-span-8 md:cursor-pointer md:rounded-lg md:px-5 md:py-3 md:hover:bg-blue-gray-500/10 md:hover:shadow-md'
@@ -32,7 +48,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
             content={
               <>
                 <span
-                  className='group/span inline-block cursor-pointer items-baseline fill-bright-slate font-semibold text-bright-slate hover:fill-emerald hover:text-emerald md:group-hover:fill-emerald md:group-hover:text-emerald'
+                  className='group/span mb-2 inline-block cursor-pointer items-baseline fill-bright-slate font-semibold text-bright-slate hover:fill-emerald hover:text-emerald md:group-hover:fill-emerald md:group-hover:text-emerald'
                   onClick={
                     isMobile
                       ? () =>

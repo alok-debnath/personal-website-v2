@@ -44,7 +44,7 @@ const items = {
 
 const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
-  const yOffset = -100; // Adjust this value to set the distance from the top
+  const yOffset = -90; // Adjust this value to set the distance from the top
   const targetId = e.currentTarget.getAttribute('href')?.substring(1); // Get the target ID from the href attribute
   const element = targetId ? document.getElementById(targetId) : null;
 
@@ -65,8 +65,8 @@ const NavList: React.FC<NavListProps> = ({ activeItem }) => {
   const navItems: NavItem[] = [
     { text: 'About', href: '#about' },
     { text: 'Experience', href: '#experience' },
-    { text: 'Projects', href: '#' },
-    { text: 'Contact', href: '#' },
+    { text: 'Projects', href: '#projects' },
+    // { text: 'Contact', href: '#' },
   ];
 
   return (
