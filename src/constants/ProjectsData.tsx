@@ -9,6 +9,7 @@ interface Projects {
   subTitles: string[];
   description: React.ReactNode;
   skills: string[];
+  links?: { text: string; href: string }[];
 }
 
 export const projectsData: Projects[] = [
@@ -39,6 +40,9 @@ export const projectsData: Projects[] = [
       'Zustand',
       'Self-hosted',
     ],
+    links: [
+      { text: 'GitHub', href: 'https://github.com/alok-debnath/breaklog' },
+    ],
   },
   {
     href: 'https://github.com/alok-debnath/personal-website-v2',
@@ -47,7 +51,9 @@ export const projectsData: Projects[] = [
     subTitles: [],
     description: (
       <>
-        <p>My current portfolio site built with Next.js and proudly self-hosted</p>
+        <p>
+          My current portfolio site built with Next.js and proudly self-hosted
+        </p>
       </>
     ),
     skills: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Self-hosted'],

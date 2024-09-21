@@ -12,6 +12,7 @@ interface Job {
   subTitles: string[];
   description: React.ReactNode;
   skills: string[];
+  links?: { text: string; href: string }[];
 }
 
 interface JobExperienceProps {
@@ -61,7 +62,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
                     xmlns='http://www.w3.org/2000/svg'
                     viewBox='0 0 20 20'
                     fill='currentColor'
-                    className='ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/span:-translate-y-1 group-hover/span:translate-x-1 motion-reduce:transition-none md:group-hover:-translate-y-1 md:group-hover:translate-x-1'
+                    className='ml-1 inline-block h-4 w-4 shrink-0 transition-transform duration-300 ease-in-out group-hover/span:-translate-y-1 group-hover/span:translate-x-1 md:group-hover:-translate-y-1 md:group-hover:translate-x-1'
                     aria-hidden='true'
                   >
                     <path
@@ -81,6 +82,35 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
                   </ul>
                 </span>
                 <span className='text-sm'>{job.description}</span>
+                {job.links && (
+                  <ul className='flex flex-wrap text-xs'>
+                    {job.links.map((link, index) => (
+                      <li
+                        key={index}
+                        className='mr-4 mt-2 flex items-center text-sm font-semibold text-bright-slate hover:text-emerald'
+                        onClick={() =>
+                          window.open(
+                            link.href,
+                            '_blank',
+                            'noopener,noreferrer',
+                          )
+                        }
+                      >
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          viewBox='0 0 20 20'
+                          fill='currentColor'
+                          className='h-3 w-3'
+                          aria-hidden='true'
+                        >
+                          <path d='M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z' />
+                          <path d='M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z' />
+                        </svg>
+                        <span className='ml-1'>{link.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <ul className='flex flex-wrap text-xs'>
                   {job.skills.map((skill, index) => (
                     <li

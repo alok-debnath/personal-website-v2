@@ -95,8 +95,7 @@ const Home = () => {
                           I&apos;m an enthusiastic web developer eager to
                           transform ideas into remarkable digital experiences.
                           My passion lies in learning and contributing to
-                          cutting-edge projects that push the boundaries of web
-                          development.
+                          projects that push the boundaries of my knowledge.
                         </p>
                       </Reveal>
                     </div>
@@ -138,7 +137,7 @@ const Home = () => {
                       <div className='space-y-4'>
                         <Reveal>
                           <p>
-                            Hi there! I&apos;m Alok Debnath, a passionate web
+                            Hi there! I&apos;m Alok, a passionate web
                             developer. My journey into coding began during my
                             Computer Engineering. As a naturally curious
                             individual, I&apos;ve always been drawn to creating
@@ -194,7 +193,7 @@ const Home = () => {
                       </Reveal>
                     </div>
                     <div className='col-span-12'>
-                      <div className='group-main grid grid-cols-12 gap-y-6'>
+                      <div className='group-main grid grid-cols-12 gap-y-14'>
                         {jobData.map((job, index) => (
                           <JobExperience key={index} job={job} />
                         ))}
@@ -222,7 +221,7 @@ const Home = () => {
                       </Reveal>
                     </div>
                     <div className='col-span-12'>
-                      <div className='group-main group/main grid grid-cols-12 gap-y-6'>
+                      <div className='group-main group/main grid grid-cols-12 gap-y-14'>
                         {projectsData.map((projects, index) => (
                           <JobExperience key={index} job={projects} />
                         ))}
