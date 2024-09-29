@@ -12,25 +12,29 @@
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@material-tailwind/react": "^2.1.10",
-    "framer-motion": "^11.5.6",
+    "framer-motion": "^11.9.0",
     "next": "14.2.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.79.3",
+    "sass": "^1.79.4",
     "sharp": "^0.33.5",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
-    "@types/node": "^22.5.5",
-    "@types/react": "^18.3.8",
+    "@eslint/js": "^9.11.1",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "eslint-config-next": "14.2.13",
+    "eslint-plugin-react": "^7.37.0",
+    "globals": "^15.9.0",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.6",
-    "tailwindcss": "^3.4.12",
-    "typescript": "^5.6.2"
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0"
   }
 }
