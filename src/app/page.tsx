@@ -99,7 +99,7 @@ const Home = () => {
                     <div className='col-span-8 my-2 mb-0 lg:my-10'>
                       <Reveal>
                         <ButtonDefault
-                          onClick={() => window.open('./resume.pdf', '_blank')}
+                          onClick={() => window.open('./Resume.pdf', '_blank')}
                           buttonLabel='Check out my Resume!'
                         />
                       </Reveal>

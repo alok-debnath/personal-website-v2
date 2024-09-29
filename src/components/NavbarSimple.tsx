@@ -169,6 +169,7 @@ const NavbarSimple: React.FC = () => {
           <div className='flex items-center gap-x-1'>
             <ButtonDefault
               size='sm'
+              onClick={() => window.open('./Resume.pdf', '_blank')}
               className='hidden lg:inline-block'
               buttonLabel='Resume'
             />
@@ -202,7 +203,7 @@ const NavbarSimple: React.FC = () => {
             <ButtonDefault
               fullWidth
               size='sm'
-              onClick={() => window.open('./resume.pdf', '_blank')}
+              onClick={() => window.open('./Resume.pdf', '_blank')}
               className='hover:translate-x-0 hover:translate-y-0 hover:bg-emerald hover:text-black hover:shadow-none'
               buttonLabel='Resume'
             />
