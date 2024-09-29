@@ -92,10 +92,7 @@ const Home = () => {
                     <div className='col-span-11 md:col-span-8'>
                       <Reveal>
                         <p className='text-sm md:text-lg'>
-                          I&apos;m an enthusiastic web developer eager to
-                          transform ideas into remarkable digital experiences.
-                          My passion lies in learning and contributing to
-                          projects that push the boundaries of my knowledge.
+                          I&apos;m a passionate web developer dedicated to crafting exceptional digital experiences. My drive is fueled by continuous learning and contributing to projects that challenge and expand my expertise.
                         </p>
                       </Reveal>
                     </div>
