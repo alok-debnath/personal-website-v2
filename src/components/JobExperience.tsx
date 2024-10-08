@@ -87,7 +87,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({ job }) => {
                     {job.links.map((link, index) => (
                       <li
                         key={index}
-                        className='mr-4 mt-2 flex cursor-pointer items-center text-sm font-semibold text-bright-slate hover:text-emerald'
+                        className='mr-4 mt-2 flex items-center text-sm font-semibold text-bright-slate hover:text-emerald'
                         onClick={() =>
                           window.open(
                             link.href,
