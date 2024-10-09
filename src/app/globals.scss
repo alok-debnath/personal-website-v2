@@ -5,12 +5,11 @@
 // change scrollbar color
 ::-webkit-scrollbar {
   width: 8px;
-  // -webkit-transition: all 0.5s ease-in-out;
 }
 
-::-webkit-scrollbar:hover {
-  width: 13px;
-}
+// ::-webkit-scrollbar:hover {
+//   width: 13px;
+// }
 
 ::-webkit-scrollbar-track {
   background: #0a192f;
